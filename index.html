@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLPedia Marketplace</title>
+  <link rel="icon" type="image/png" href="assets/img/logo64x64.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar glass">
+    <div class="logo">
+      <img src="assets/img/logoflpedia.png" alt="FLPedia Logo">
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cari FLP, FLM, Preset, Plugin...">
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#produk">Produk</a>
+      <a href="#kategori">Kategori</a>
+      <a href="#payment">Payment</a>
+    </nav>
+
+    <div class="nav-icons">
+       <div class="cart-icon" onclick="openCart()">
+      <button>
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span id="cartCount">0</span>
+
+      </button>
+      </div>
+      <button><i class="fa-solid fa-bell"></i></button>
+      <button><i class="fa-solid fa-user"></i></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <span class="tag">Marketplace Producer Musik</span>
+
+      <h1>
+        Premium FLP, FLM & VST Collection
+      </h1>
+
+      <p>
+        Temukan project FL Studio, preset, sample pack, plugin, dan tools producer terbaik dengan kualitas premium.
+      </p>
+
+    <div class="hero-buttons">
+       <a href="#produk" class="btn-primary">
+         Belanja Sekarang
+       </a>
+
+       <a href="#produk" class="btn-secondary">
+         Explore Produk
+       </a>
+    </div>
+
+    </div>
+
+    <div class="hero-right">
+      <div class="flash-sale glass">
+
+  <div class="flash-top">
+    <span class="flash-label">⚡ FLASH SALE</span>
+
+    <div class="flash-timer">
+      <div class="time-box">
+        <span id="hours">12</span>
+        <small>Jam</small>
+      </div>
+
+      <div class="time-box">
+        <span id="minutes">45</span>
+        <small>Menit</small>
+      </div>
+
+      <div class="time-box">
+        <span id="seconds">20</span>
+        <small>Detik</small>
+      </div>
+    </div>
+  </div>
+
+  <h2>ALL Product 70% OFF</h2>
+
+  <p>
+    Limited edition VST package untuk producer modern.
+  </p>
+
+  <div class="flash-progress">
+  <div class="flash-bar"></div>
+</div>
+
+</div>
+
+      <div class="trending-card">
+        <span>TRENDING</span>
+        <h2>FLP Pack 0landrys</h2>
+        <p> Thailand Edith</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY -->
+  <section class="section" id="kategori">
+    <div class="section-title">
+      <h2>Kategori Populer</h2>
+    </div>
+
+    <div class="category-grid">
+
+  <div class="category-card">
+    <div class="category-icon">🎹</div>
+    <span>FLP Project</span>
+  </div>
+
+  <div class="category-card">
+    <div class="category-icon">📱</div>
+    <span>FLM Project</span>
+  </div>
+
+  <div class="category-card">
+    <div class="category-icon">🎛️</div>
+    <span>Plugin VST</span>
+  </div>
+
+  <div class="category-card">
+    <div class="category-icon">🥁</div>
+    <span>Sample Pack</span>
+  </div>
+
+  <div class="category-card">
+    <div class="category-icon">⚡</div>
+    <span>DAW</span>
+  </div>
+
+</div>
+  </section>
+
+  <!-- FILTER -->
+<section class="filter-section glass">
+
+  <div class="filter-left">
+
+    <!-- KATEGORI -->
+    <select id="categoryFilter">
+      <option value="all">Semua Kategori</option>
+      <option value="flp">FLP Project</option>
+      <option value="flm">FLM Project</option>
+      <option value="vst">Plugin VST</option>
+      <option value="sample">Sample Pack</option>
+      <option value="daw">DAW</option>
+    </select>
+
+    <!-- HARGA -->
+    <select id="priceFilter">
+      <option value="all">Harga</option>
+      <option value="low">Termurah</option>
+      <option value="high">Termahal</option>
+    </select>
+
+    <!-- SORTING -->
+    <select id="sortFilter">
+      <option value="default">Sorting</option>
+      <option value="trending">Trending</option>
+      <option value="rating">Rating</option>
+    </select>
+
+  </div>
+
+  <button id="darkModeBtn">Dark Mode</button>
+
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="produk">
+
+  <div class="section-title">
+    <h2>Produk</h2>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="product-grid">
+
+    <!-- ===== PRODUCT 1 ===== -->
+    <div class="product-card glass"
+         data-category="flp" 
+         data-price="200000"
+         data-rating="4.9"
+         data-trending="13">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Style Breakbeat"> 
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Style Breakbeat</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp200.000</h4>
+            <span>Rp235.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="1"
+              data-name="FLP Style Breakbeat"
+              data-price="200000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+            onclick="openPreview(
+            '1',
+            'FLP Style Breakbeat',
+            '200000',
+            'assets/img/logo64x64.png',
+            'FLP Style Breakbeat',
+            'assets/audio/.mp3'
+            )">
+            Preview
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 1 ===== -->
+
+
+    <!-- ===== PRODUCT 2 ===== -->
+    <div class="product-card glass"
+         data-category="flp"
+         data-price="400000"
+         data-rating="4.9"
+         data-trending="10">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Style Reggae">
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Style Reggae</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp400.000</h4>
+            <span>Rp470.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="2"
+              data-name="FLP Style Reggae"
+              data-price="470000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+              onclick="openPreview(
+                '2',
+                'FLP Style Reggae'
+                ,350000,
+                'assets/img/logo64x64.png',
+                'FLP Style Reggae',audioReggae)">
+                Preview
+         </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 2 ===== -->
+
+        <!-- ===== PRODUCT 3 ===== -->
+    <div class="product-card glass"
+         data-category="flp"
+         data-price="350000"
+         data-rating="4.9"
+         data-trending="70">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Thailand Style">
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Thailand Style</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp350.000</h4>
+            <span>Rp412.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="3"
+              data-name="FLP Thailand Style"
+              data-price="350000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+              onclick="openPreview(
+                '3',
+                'FLP Thailand Style'
+                ,350000,
+                'assets/img/logo64x64.png',
+                'FLP Thailand Style',audioThailand)">
+                Preview
+         </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 3 ===== -->
+
+         <!-- ===== PRODUCT 4 ===== -->
+    <div class="product-card glass"
+         data-category="flp"
+         data-price="100000"
+         data-rating="4.9"
+         data-trending="56">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Style Healing">
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Style Healing</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp100.000</h4>
+            <span>Rp118.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="4"
+              data-name="FLP Style Healing"
+              data-price="100000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+            onclick="openPreview(
+            '4',
+            'FLP Style Healing',
+            '100000',
+            'assets/img/logo64x64.png',
+            'FLP Style Healing',
+            'assets/audio/.mp3'
+            )">
+            Preview
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 4 ===== -->   
+
+         <!-- ===== PRODUCT 5 ===== -->
+    <div class="product-card glass"
+         data-category="flp"
+         data-price="1000000"
+         data-rating="4.9"
+         data-trending="69">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Style Hipdut">
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Style Hipdut</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp1.000.000</h4>
+            <span>Rp1.176.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="5"
+              data-name="FLP Style Hipdut"
+              data-price="1000000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+            onclick="openPreview(
+            '5',
+            'FLP Style Hipdut',
+            '1000000',
+            'assets/img/logo64x64.png',
+            'FLP Style Hipdut',
+            'assets/audio/.mp3'
+            )">
+            Preview
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 5 ===== --> 
+
+             <!-- ===== PRODUCT 6 ===== -->
+    <div class="product-card glass"
+         data-category="flp"
+         data-price="250000"
+         data-rating="4.9"
+         data-trending="4">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Style JDM Plat KT">
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Style JDM Plat KT</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp250.000</h4>
+            <span>Rp294.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="6"
+              data-name="FLP Style JDM Plat KT"
+              data-price="250000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+            onclick="openPreview(
+            '6',
+            'FLP Style JDM Plat KT',
+            '250000',
+            'assets/img/logo64x64.png',
+            'FLP Style JDM Plat KT',
+            'assets/audio/.mp3'
+            )">
+            Preview
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 6 ===== --> 
+
+             <!-- ===== PRODUCT 7 ===== -->
+    <div class="product-card glass"
+         data-category="flp"
+         data-price="300000"
+         data-rating="4.9"
+         data-trending="30">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Style Rully Fvnky">
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Style Rully Fvnky</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp300.000</h4>
+            <span>Rp353.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="7"
+              data-name="FLP Style Rully Fvnky"
+              data-price="300000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+            onclick="openPreview(
+            '7',
+            'FLP Style Rully Fvnky',
+            '300000',
+            'assets/img/logo64x64.png',
+            'FLP Style Rully Fvnky',
+            'assets/audio/.mp3'
+            )">
+            Preview
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 7 ===== --> 
+
+             <!-- ===== PRODUCT 8 ===== -->
+    <div class="product-card glass"
+         data-category="flp"
+         data-price="350000"
+         data-rating="4.9"
+         data-trending="30">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Style Break Latin">
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Style Break Latin</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp350.000</h4>
+            <span>Rp412.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="8"
+              data-name="FLP Style Break Latin"
+              data-price="350000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+            onclick="openPreview(
+            '8',
+            'FLP Style Break Latin',
+            '350000',
+            'assets/img/logo64x64.png',
+            'FLP Style Break Latin',
+            'assets/audio/.mp3'
+            )">
+            Preview
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 8 ===== --> 
+
+ <!-- ===== PRODUCT 9 ===== -->
+    <div class="product-card glass"
+         data-category="flp"
+         data-price="175000"
+         data-rating="4.9"
+         data-trending="27">
+
+      <div class="product-image">
+        <img src="assets/img/logo64x64.png"
+             alt="FLP Style Break Ducth">
+      </div>
+
+      <div class="product-content">
+
+        <h3>FLP Style Break Ducth</h3>
+
+        <div class="price-row">
+          <div>
+            <h4>Rp175.000</h4>
+            <span>Rp206.000</span>
+          </div>
+
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="product-footer">
+          <span>FLPedia Official</span>
+          <span>0 sold</span>
+        </div>
+
+        <div class="product-buttons">
+
+          <button 
+              class="cart-btn add-cart"
+              data-id="9"
+              data-name="FLP Style Break Ducth"
+              data-price="175000"
+              data-image="assets/img/logo64x64.png">
+            Add Cart
+          </button>
+
+          <button class="preview-btn"
+            onclick="openPreview(
+            '9',
+            'FLP Style Break Ducth',
+            '175000',
+            'assets/img/logo64x64.png',
+            'FLP Style Break Ducth',
+            'assets/audio/.mp3'
+            )">
+            Preview
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== END PRODUCT 9 ===== --> 
+
+
+  </div>
+
+</section>
+
+<!-- ===== fitur preview produk ===== -->
+<!-- MODAL PREVIEW -->
+<div class="preview-modal" id="previewModal">
+
+  <div class="preview-box">
+
+  <div class="preview-grid">
+
+    <span class="close-preview" onclick="closePreview()">✕</span>
+
+    <!-- IMAGE -->
+    <div class="preview-image">
+      <img id="previewImg" src="">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="preview-content">
+
+      <h2 id="previewTitle"></h2>
+
+      <h3 id="previewPrice"></h3>
+
+      <p id="previewDesc"></p>
+
+      <!-- AUDIO PLAYER -->
+      <div class="audio-player">
+
+        <audio id="previewAudio">
+          <source id="previewAudioSource" src="" type="audio/mpeg">
+        </audio>
+
+<!-- PROGRESS BAR -->
+    <div class="audio-progress">
+
+    <span id="currentTime">0:00</span>
+
+   <input
+      type="range"
+      id="audioProgress"
+      value="0"
+      min="0"
+      max="100"
+    >
+
+    <span id="duration">0:00</span>
+
+  </div>
+
+  <!-- BUTTON -->
+        <div class="audio-controls">
+
+          <button onclick="backAudio()">⏮</button>
+          <button type="button"
+           onclick="toggleAudio(event)"
+           id="playBtn">
+           ▶
+          </button>
+          <button onclick="forwardAudio()">⏭</button>
+
+        </div>
+
+      </div>
+
+<div class="preview-actions">
+
+  <button
+    class="cart-btn"
+    id="previewAddCart"
+  >
+    Add Cart
+  </button>
+
+</div> 
+
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <!-- PAYMENT -->
+  <section class="section" id="payment">
+    <div class="payment-box glass">
+      <div class="section-title">
+        <h2>Metode Pembayaran</h2>
+      </div>
+
+      <div class="payment-grid">
+
+         <div class="payment-card">
+           <div class="payment-icon">
+           <img src="https://images.seeklogo.com/logo-png/39/1/quick-response-code-indonesia-standard-qris-logo-png_seeklogo-391791.png">
+         </div>
+         <div class="payment-name">
+          QRIS
+         </div>
+      </div>
+
+      <div class="payment-card">
+           <div class="payment-icon">
+           <img src="https://images.seeklogo.com/logo-png/39/1/dana-e-wallet-app-logo-png_seeklogo-399948.png">
+         </div>
+         <div class="payment-name">
+          Dana
+         </div>
+      </div>
+
+      <div class="payment-card">
+           <div class="payment-icon">
+           <img src="https://images.seeklogo.com/logo-png/36/1/gopay-logo-png_seeklogo-369813.png">
+         </div>
+         <div class="payment-name">
+          Gopay
+         </div>
+      </div>
+
+      <div class="payment-card">
+           <div class="payment-icon">
+           <img src="https://images.seeklogo.com/logo-png/1/1/bank-mandiri-logo-png_seeklogo-16290.png">
+         </div>
+         <div class="payment-name">
+          Mandiri
+         </div>
+      </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- intine pitur pitur -->
+<!-- =========================
+     CART OVERLAY
+========================= -->
+
+<div id="cartOverlay"
+     onclick="closeCart()">
+</div>
+
+<!-- =========================
+     CART SIDEBAR
+========================= -->
+
+<div id="cartSidebar">
+
+  <div class="cart-header">
+
+  <div style="display:flex;align-items:center;gap:10px;">
+    <h2>Keranjang</h2>
+  </div>
+
+  <button onclick="closeCart()">
+    ✕
+  </button>
+
+</div>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-bottom">
+
+  <div class="cart-action-top">
+
+    <label class="check-icon">
+  <input type="checkbox" id="selectAllCart" onchange="toggleSelectAll()">
+  <span class="custom-check">
+    <i class="fa-solid fa-check"></i>
+  </span>
+  <span>Pilih Semua</span>
+</label>
+
+    <button class="delete-selected-btn" onclick="deleteSelected()">
+  <i class="fa-solid fa-trash"></i> Hapus
+</button>
+
+  </div>
+
+  <h3>
+    Total:
+    Rp <span id="cartTotal">0</span>
+  </h3>
+
+  
+
+  <button class="checkout-btn" onclick="checkoutSelected()">
+    Checkout
+  </button>
+
+</div>
+
+</div>
+
+  <!-- PROFILE -->
+  <section class="section" id="profile">
+    <div class="profile-box glass">
+      <div class="profile-left">
+        <div class="profile-avatar">
+          <img src="assets/img/logo64x64.png" alt="Profile">
+        </div>
+
+        <h2>FLPedia</h2>
+        <p>Marketplace FLP, FLM & Plugin Terlengkap</p>
+      </div>
+
+      <div class="profile-right">
+        <div class="stats-grid">
+          <div class="stats-card">
+            <h3>19k</h3>
+            <span>Produk Terjual</span>
+          </div>
+
+          <div class="stats-card">
+            <h3><div class="rating">⭐ 4.9</div></h3>
+            <span>Rating Pelanggan</span>
+          </div>
+
+          <div class="stats-card">
+            <h3>98%</h3>
+            <span>Chat Dibalas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="assets/img/logoflpedia.png" alt="FLPedia Logo">
+        <p>Marketplace digital modern untuk producer musik.</p>
+      </div>
+
+      <div class="quick-menu">
+        <h3>Quick Menu</h3>
+           <a href="#home">Home</a>
+           <a href="#produk">Produk</a>
+           <a href="#kategori">Kategori</a>
+        </div>
+      <div>
+        <h3>Payment</h3>
+        <p>QRIS</p>
+        <p>Dana</p>
+        <p>Gojek</p>
+        <p>Mandiri</p>
+      </div>
+
+      <div>
+        <h3>Social Media</h3>
+          <div class="socials">
+            <a href="https://www.instagram.com/_galihchyo" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@chyo.galih" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="mailto:contact.cahyogalih@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+      </div>
+</div>
+    </div>
+
+    <div class="copyright">
+      © 2026 FLPedia Marketplace
+    </div>
+  </footer>
+
+<!-- =========================
+     CHECKOUT MODAL
+========================= -->
+
+<div id="checkoutModal" class="checkout-modal">
+
+  <div class="checkout-box">
+
+    <span class="close-checkout" onclick="closeCheckout()">✕</span>
+
+    <h2>Checkout Pembayaran</h2>
+
+    <!-- ORDER DETAIL -->
+
+    <div class="checkout-order" id="checkoutOrder"></div>
+
+    <!-- TOTAL -->
+
+    <div class="checkout-total">
+      <h3>
+        Total Pembayaran:
+        <span id="checkoutTotal">Rp 0</span>
+      </h3>
+    </div>
+
+    <!-- PAYMENT -->
+
+ <div class="payment-method">
+
+  <!-- QRIS -->
+  <label class="method-item">
+
+    <input
+      type="radio"
+      name="payment"
+      value="QRIS"
+      checked
+    >
+
+    <div class="method-content">
+
+      <img
+        src="https://images.seeklogo.com/logo-png/39/1/quick-response-code-indonesia-standard-qris-logo-png_seeklogo-391791.png"
+        alt="QRIS"
+      >
+
+      <span>QRIS</span>
+
+      <i class="fa-solid fa-circle-check"></i>
+
+    </div>
+
+  </label>
+
+  <!-- DANA -->
+  <label class="method-item">
+
+    <input
+      type="radio"
+      name="payment"
+      value="Dana"
+    >
+
+    <div class="method-content">
+
+      <img
+        src="https://images.seeklogo.com/logo-png/39/1/dana-e-wallet-app-logo-png_seeklogo-399948.png"
+        alt="Dana"
+      >
+
+      <span>Dana</span>
+
+      <i class="fa-solid fa-circle-check"></i>
+
+    </div>
+
+  </label>
+
+  <!-- GOPAY -->
+  <label class="method-item">
+
+    <input
+      type="radio"
+      name="payment"
+      value="Gopay"
+    >
+
+    <div class="method-content">
+
+      <img
+        src="https://images.seeklogo.com/logo-png/36/1/gopay-logo-png_seeklogo-369813.png"
+        alt="Gopay"
+      >
+
+      <span>Gopay</span>
+
+      <i class="fa-solid fa-circle-check"></i>
+
+    </div>
+
+  </label>
+
+  <!-- MANDIRI -->
+  <label class="method-item">
+
+    <input
+      type="radio"
+      name="payment"
+      value="Bank Mandiri"
+    >
+
+    <div class="method-content">
+
+      <img
+        src="https://images.seeklogo.com/logo-png/1/1/bank-mandiri-logo-png_seeklogo-16290.png"
+        alt="Mandiri"
+      >
+
+      <span>Bank Mandiri</span>
+
+      <i class="fa-solid fa-circle-check"></i>
+
+    </div>
+
+  </label>
+
+</div>
+
+    <!-- BUTTON -->
+
+    <button class="confirm-checkout-btn" onclick="processPayment()">
+       Lanjutkan Pembayaran
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- PAYMENT POPUP -->
+<div id="paymentPopup" class="checkout-modal">
+
+  <div class="checkout-box">
+
+    <!-- CLOSE -->
+    <span class="close-checkout" onclick="closePaymentPopup()">✕</span>
+
+    <!-- TITLE -->
+    <h2 id="paymentTitle">Pembayaran QRIS</h2>
+
+    <!-- TOTAL PEMBAYARAN -->
+    <div class="payment-total">
+
+      <p>Total Pembayaran</p>
+
+      <h1 id="paymentAmount">
+        Rp 0
+      </h1>
+
+    </div>
+
+    <!-- QRIS -->
+    <div id="qrisBox" style="display:none; text-align:center;">
+
+      <img
+        src="assets/img/qris.jpg"
+        id="qrisImage"
+        style="
+          width:100%;
+          max-width:280px;
+          border-radius:20px;
+          margin-top:10px;
+        "
+      >
+
+      <p style="
+        margin-top:18px;
+        color:#64748b;
+        font-size:15px;
+      ">
+        Scan QRIS di atas untuk melakukan pembayaran
+      </p>
+
+    </div>
+
+    <!-- PAYMENT INFO -->
+    <div id="paymentInfo"></div>
+
+    <!-- BUTTON -->
+    <button class="confirm-checkout-btn" onclick="confirmCheckout()">
+      Saya Sudah Bayar
+    </button>
+
+  </div>
+
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
