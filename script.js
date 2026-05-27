@@ -1187,7 +1187,7 @@ function confirmCheckout(){
 
   /* NOMOR WA */
 
-  const phone = "6285117791278";
+  const phone = "6282299495064";
 
   const whatsappURL =
   `https://wa.me/${phone}?text=${message}`;
