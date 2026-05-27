@@ -1366,8 +1366,56 @@ filterProducts();
 
 // list data audio
 
-const audioThailand =
-"https://www.image2url.com/r2/default/audio/1779268195257-2a5b2782-d034-42ac-b033-e36974a7e2ca.mp3";
+const audioBreakbeat =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/1felik%20fvnky%20style%20breakbeat_[cut_59sec].mp3";
 
 const audioReggae =
-"https://sure-emerald-hvs5v2or6l.edgeone.app/STYLE%20REGGAE%20-%20YOGI%20SJ%20RMX.mp3";
+"https://husky-pink-4cbsm2o0j2.edgeone.app/2felik%20fvnky%20style%20reggae_[cut_60sec].mp3";
+
+const audioThailand =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/3felik%20fvnky%20style%20thailand_[cut_59sec].mp3";
+
+const audioHealing =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/4galih%20chyo%20ft%20felik%20style%20healing_[cut_70sec].mp3";
+
+const audioHipdut =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/5felik%20fvnky%20style%20hipdut_[cut_50sec].mp3";
+
+const audioJdmkt =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/6felik%20fvnky%20style%20jdm%20plat%20kt_[cut_63sec].mp3";
+
+const audioRullyfvnky =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/7felik%20fvnky%20style%20rully%20fvnky_[cut_45sec].mp3";
+
+const audioBreakdutch =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/8felik%20fvnky%20style%20break%20dutch_[cut_62sec].mp3";
+
+const audioReggaetone =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/9felik%20fvnky%20style%20reggae%20tone_[cut_74sec].mp3";
+
+const audioGilanti =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/10felik%20fvnky%20style%20gilanti_[cut_57sec].mp3";
+
+const audioKharisspn =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/11galihchyo%20style%20kharis.mp3";
+
+const audioEnafdutch =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/12felik%20fvnky%20style%20enaf%20dutch_[cut_66sec].mp3";
+
+const audioAsoy =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/13felik%20fvnky%20style%20asoy_[cut_61sec].mp3";
+
+const audioLambada =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/14felik%20fvnky%20style%20lambada_[cut_68sec].mp3";
+
+const audioAncox =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/15felik%20fvnky%20style%20ancox_[cut_62sec].mp3";
+
+const audioKondang =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/16felik%20fvnky%20style%20kondang_[cut_44sec].mp3";
+
+const audioSlowbass =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/17felik%20fvnky%20style%20slow%20bass_[cut_54sec].mp3";
+
+const audioVelocity =
+"https://husky-pink-4cbsm2o0j2.edgeone.app/18felik%20fvnky%20style%20pelociti_[cut_56sec].mp3";
